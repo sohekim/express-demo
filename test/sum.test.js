@@ -1,3 +1,4 @@
+// question - what does the param mean
 const sum = require("../sum");
 
 test('adds 2 + 2 to equal 4', () =>{
