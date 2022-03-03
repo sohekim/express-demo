@@ -22,8 +22,8 @@ module.exports = class ArticleService{
         } catch (error) {
             console.log(error);
         }
-
     }
+
     static async getArticleById(articleId){
         try {
             const singleArticleResponse =  await Article.findById({_id: articleId});
