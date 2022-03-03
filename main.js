@@ -3,6 +3,7 @@ require('dotenv').config();
 // question - what does require do here
 const express = require('express');
 const articles = require("./routes/article.routes");
+const recipes = require("./routes/recipe.routes");
 const bodyParser =  require("body-parser");
 
 const app = express();
@@ -41,3 +42,4 @@ app.listen(port, () => {
 
 //register the enpoints
 app.use("/api/v1/articles", articles);
+app.use("/api/v1/recipes", recipes);
