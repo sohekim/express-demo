@@ -1,3 +1,5 @@
+// todo: req body raw or something else?
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -18,6 +20,10 @@ const recipeSchema = new Schema({
         type: Number,
         required: true,
     },
+    // nutritions: {
+    //     type: [{ type: String, val: Number }],
+    //     required: true,
+    // },
     main_ingredients: {
         type: [String],
         required: true,

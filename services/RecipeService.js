@@ -5,6 +5,9 @@ module.exports = class RecipeService {
     static async createRecipe(data){
         try {
             let mainIngredients = data.main_ingredients.toString().split(",");
+
+
+
             // todo: verify if the split main ingredient is actually a main ingredient
             // todo: maybe a ENUM
             const newRecipe = {
@@ -12,6 +15,7 @@ module.exports = class RecipeService {
                 description: data.description,
                 price_per_serving: data.price_per_serving,
                 minutes: data.minutes,
+                nutritions: nutritions,
                 main_ingredients: mainIngredients,
             }
             const response = await new Recipe(newRecipe).save();
